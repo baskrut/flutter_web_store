@@ -1,0 +1,3 @@
+class SettingsDictionary{
+  const SettingsDictionary();
+}

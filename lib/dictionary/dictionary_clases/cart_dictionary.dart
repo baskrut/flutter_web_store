@@ -1,0 +1,3 @@
+class CartDictionary{
+  const CartDictionary();
+}

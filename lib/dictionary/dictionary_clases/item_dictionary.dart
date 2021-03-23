@@ -1,0 +1,3 @@
+class ItemDictionary{
+  const ItemDictionary();
+}
