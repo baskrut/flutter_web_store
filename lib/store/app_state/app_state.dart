@@ -1,10 +1,12 @@
 
-import 'package:flutter/foundation.dart';
-// import 'package:flutter_redux_navigation/flutter_redux_navigation.dart' as redux;
+import 'package:flutter/material.dart';
+import 'package:flutter_redux_navigation/flutter_redux_navigation.dart' as redux;
 
 import 'package:redux_epics/redux_epics.dart';
 import 'package:web_store/store/pages_state/auth_page_state/auth_epics.dart';
 import 'package:web_store/store/pages_state/auth_page_state/auth_state.dart';
+import 'package:web_store/store/pages_state/main_page_state/main_page_epics.dart';
+import 'package:web_store/store/pages_state/main_page_state/main_page_state.dart';
 import 'package:web_store/store/shared/dictionary_state/dictionary_state.dart';
 import 'package:web_store/store/shared/navigation_state/navigation_actions.dart';
 import 'package:web_store/store/shared/navigation_state/navigation_state.dart';
@@ -16,6 +18,8 @@ class AppState {
   final NavigationState navigationState;
 
   final DictionaryState dictionaryState;
+
+  final MainPageState mainPageState;
 
 
   // final SplashScreenState splashScreenState;
@@ -31,6 +35,7 @@ class AppState {
     @required this.authState,
     @required this.dictionaryState,
     @required this.navigationState,
+    @required this.mainPageState,
   /*@required this.favoritesState,
 
     @required this.onBoardingState,
@@ -48,6 +53,7 @@ class AppState {
       authState: AuthState.initial(),
       dictionaryState: DictionaryState.initial(),
       navigationState: NavigationState.initial(),
+      mainPageState: MainPageState.initial(),
       /*favoritesState: FavoritesState.initial(),
 
 
@@ -85,6 +91,7 @@ class AppState {
       authState: state.authState.reducer(action),
       dictionaryState: state.dictionaryState.reducer(action),
       navigationState: state.navigationState.reducer(action),
+      mainPageState: state.mainPageState.reducer(action),
       // navigationState: state.navigationState.reducer(action),
       // loaderState: state.loaderState.reducer(action),
       // favoritesState: state.favoritesState.reducer(action),
@@ -102,6 +109,7 @@ class AppState {
   ///In [getAppEpic], call the main epic.
   static final getAppEpic = combineEpics<AppState>([
     AuthStateEpics.indexEpic,
+    MainPageEpics.indexEpic,
     // OnBoardingPageStateEpics.indexEpic,
     // SplashScreenStateEpics.indexEpic,
     // InitializeStateEpics.indexEpic,

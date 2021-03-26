@@ -7,7 +7,7 @@ class MainLayout extends StatelessWidget {
 
   MainLayout({
     this.child,
-    this.appBarTitle,
+    this.appBarTitle = ' ',
   });
 
   @override

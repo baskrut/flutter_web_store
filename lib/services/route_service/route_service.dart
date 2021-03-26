@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux_navigation/flutter_redux_navigation.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:web_store/res/routes.dart';
-import 'file:///C:/Users/AppVesto/AndroidStudioProjects/web_store/lib/ui/pages/main_page/main_page.dart';
+
 
 class RouteService {
 
@@ -23,13 +23,15 @@ class RouteService {
     PageTransition transition;
 
     switch (settings.name) {
-      case Routes.kMainPage:
+///
+     /* case Routes.kMainPage:
         transition = PageTransition(
           child: MainPage(),
           type: PageTransitionType.fade,
           settings: settings,
         );
-        break;
+        break;*/
+        ///
       /*case Routes.kSettingsPage:
         transition = PageTransition(
           child: SettingsPage(),
@@ -46,13 +48,14 @@ class RouteService {
         );
         break;*/
 
-
-      default:
+///
+     /* default:
         transition = _defaultRoute(
           settings: settings,
           page: MainPage(),
         );
-        break;
+        break;*/
+        ///
     }
     return transition;
   }

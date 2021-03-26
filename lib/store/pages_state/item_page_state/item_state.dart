@@ -1,21 +1,21 @@
 import 'dart:collection';
 
-import 'package:web_store/models/models/item.dart';
+import 'package:web_store/models/models/product.dart';
 import 'package:web_store/store/reducer.dart';
 
 class ItemState{
-  final Item item;
+  final Product item;
 
   ItemState({this.item});
 
   factory ItemState.initial(){
     return ItemState(
-      item: Item(),
+      item: Product(),
     );
   }
 
   ItemState copyWith({
-  Item item,
+  Product item,
 }){
     return ItemState(
       item: item ?? this.item,

@@ -1,8 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.andrewbas.web_store">
+
+    <uses-sdk android:minSdkVersion="16"
+        android:targetSdkVersion="30"
+         />
+
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="web_store"
         android:icon="@mipmap/ic_launcher">
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

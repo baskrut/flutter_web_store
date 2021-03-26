@@ -1,13 +1,16 @@
 class ApiParams{
-  static const String id = '&id';
-  static const String str = '&str';
-  static const String ids = '&ids';
-  static const String code = '&code';
-  static const String email = '&email';
-  static const String token = '&token';
-  static const String locale = '&locale';
-  static const String password = '&password';
-  static const String firstName = '&firstName';
-  static const String googleToken = '&googleToken';
-  static const String refreshToken = '&refreshToken';
+
+  static const String baseUrl = 'http://makeup-api.herokuapp.com/api/v1/products.json?';
+
+  static const String productType = 'product_type=';
+  static const String productCategory = 'product_category=';
+  static const String productTags = 'product_tags=';
+  static const String brand = 'brand='; // to get all products let query empty
+  static const String priceGreater = 'price_greater_then=';
+  static const String priceLess = 'price_less_then=';
+  static const String ratingGreater = 'rating_greater_then=';
+  static const String ratingLess = 'rating_less_then=';
+
+
+  static const String GET = 'GET';
 }

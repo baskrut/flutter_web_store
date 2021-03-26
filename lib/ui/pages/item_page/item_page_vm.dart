@@ -1,9 +1,9 @@
 import 'package:redux/redux.dart';
-import 'package:web_store/models/models/item.dart';
+import 'package:web_store/models/models/product.dart';
 import 'package:web_store/store/app_state/app_state.dart';
 
 class ItemPageVM{
-  final Item item;
+  final Product item;
 
   ItemPageVM({this.item,});
 
